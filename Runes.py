@@ -70,6 +70,7 @@ for h in range(len(equations)):
 
     for a in range(10):
 
+        failed = False
         num1 = ""
         num2 = ""
         answer = ""
@@ -91,3 +92,10 @@ for h in range(len(equations)):
 
         if check_op(lFull[opIndex], answer):
             break
+
+        if sub == "9":
+            failed = True
+
+    if failed:
+        print("-1")
+
